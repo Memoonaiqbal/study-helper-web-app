@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFox</title>
+  <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>FocusFox</h1>
+    <button id="themeToggle">Dark Mode</button>
+  </header>
+
+  <!-- Main Content -->
+  <div class="mainContent">
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <p>Tasks Completed Today: <span id="tasksCompleted">0</span></p>
+      <p id="motivationalQuote"><b>"The future depends on what you do today."</b> – Mahatma Gandhi</p>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todoList">
+      <h2>To-Do List</h2>
+      <div class="taskInputContainer">
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button id="addTask">Add Task</button>
+      </div>
+      <ul id="taskList"></ul>
+      <h3>Completed Tasks</h3>
+      <ul id="completedTaskList"></ul>
+    </section>
+  </div>
+
+  <!-- Pomodoro Timer Section -->
+  <section id="pomodoro">
+    <h2>Set Study Timer</h2>
+    <p id="timer">25:00</p>
+    <div class="timerControls">
+        <button id="startTimer">Start</button>
+        <button id="stopTimer">Stop</button>
+        <select id="hoursDropdown">
+            <option value="0">0 hrs</option>
+            <option value="1">1 hr</option>
+            <option value="2">2 hrs</option>
+        </select>
+        <select id="minutesDropdown">
+            <option value="0">0 mins</option>
+            <option value="15">15 mins</option>
+            <option value="30">30 mins</option>
+            <option value="45">45 mins</option>
+        </select>
+        <button id="setTimer">Set Timer</button>
+        <button id="resetTimer">Reset Timer</button>
+    </div>
+  </section>
+
+  <!-- Notes Section -->
+  <section id="notes">
+    <h2>Notes</h2>
+    <textarea id="noteArea" placeholder="Write your notes here..."></textarea>
+    <div class="noteButtons">
+        <button id="saveUnlockedNote">Save as Unlocked Note</button>
+        <button id="saveLockedNote">Save as Locked Note</button>
+    </div>
+    <div id="viewLockedNotesContainer">
+        <button id="viewLockedNotesButton">View Locked Notes</button>
+    </div>
+    <div id="notesDisplay">
+        <h3>Unlocked Notes</h3>
+        <ul id="unlockedNotesList"></ul>
+        <h3>Locked Notes</h3>
+        <ul id="lockedNotesList"></ul>
+    </div>
+  </section>
+
+  <script src="project1.js"></script>
+</body>
+</html>
